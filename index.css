@@ -9,14 +9,69 @@
 *{
  font-family:'Times New Roman', Times, serif;
 }
-html {
+body{
  background: url(assets/cyd.jpg) no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
  height: 100%;
+ width: 100%;
  overflow: hidden;
+}
+.nav-bar{
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+ul li{
+  padding: 0px 10px;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+ul li a:hover{
+  color: rgb(208, 169, 42);
+}
+.title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+}
+.title:hover{
+  color: rgb(208, 169, 42);
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #000;
 }
 .form{
  width: 100px;
@@ -28,7 +83,7 @@ html {
 }
 .contact{
  width: 100%;
- animation: slideInLeft 2s ease;
+ animation: slideInLeft 2s ease ;
  display: flex;
  align-items: center;
  flex-direction: column;
@@ -73,4 +128,28 @@ button:hover{
  background:none;
  color: rgb(208, 169, 42);
  border: 1px solid black;
+}
+@media only screen and (max-width: 700px) {
+  .hamburger {
+      display: block;
+  }
+  .nav-bar {
+      position: absolute;
+      width: 100%;
+      left: -100%;
+      top: 70px;
+      width: 100%;
+      background: #fff;
+      padding: 30px;
+      transition: 0.3s;
+  }
+  #nav_check:checked ~ .nav-links {
+      left: 0;
+  }
+  .nav-links ul {
+      display: block;
+  }
+  .nav-links ul li a {
+      margin: 5px 0;
+  }
 }

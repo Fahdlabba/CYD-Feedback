@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
+ <meta name="description" content="GDSC IssatSo">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="icon" type="image/x_icon"  href="assets/cyd.jpg">
  <link href="index.css" rel="stylesheet">
- <title>Document</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>CYD V3.0</title>
 </head>
 <body>
+ <div class="nav-bar">
+  <div class="title">
+   <h1>GDSC IssatSo</h1>
+  </div>
+  <div class="nav-links" >
+   <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="https://gdsc.community.dev/higher-institute-of-applied-science-and-technology/" target="_blank">About Us</a></li>
+    <li><a href="https://www.youtube.com/watch?v=gq1KlHxX2F8&list=PLTQzmIJd0tzEZ5nqam1I1rqbUyUXZWDSh" target="_blank">Podcast</a></li>
+    <li><a href='https://linktr.ee/gdsc_issatso?fbclid=IwAR3iSxu1rdEGtFlf4jCHp10KyUWE5aJjCQV5CToH7oVq9ox3u5N4l1255jo' target="_blank">Contact</a></li>
+   </ul> 
+
+  </div>
+ </div>
  <section class="form" >
   <form class="form ex1" action="https://formspree.io/f/xoqorryo" method="POST" target="_blank">
    <div class="contact" >
@@ -17,6 +34,15 @@
    </div>
   </form>
  </section>
-
+ <script>
+  menuBtn=document.querySelector('.menu-btn');
+  navBar=document.querySelector('.nav-links');
+  menuBtn.onclick=function(){
+    navBar.classList.toggle('active');
+  }
+  window.onscroll=()=>{
+    navBar.classList.remove('active')
+  }
+</script>
 </body>
 </html>
