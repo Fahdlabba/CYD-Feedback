@@ -83,6 +83,7 @@ ul li a:hover{
 }
 .contact{
  width: 100%;
+ margin-top: 100px;
  animation: slideInLeft 2s ease ;
  display: flex;
  align-items: center;
@@ -92,16 +93,19 @@ ul li a:hover{
  min-height: 100vh; 
 }
 .mail{
+  outline: none;
  display: flex;
  color: black;
  font-size: 1rem;
  border-radius: 7px;
  padding: 9px;
- opacity: 1px;
- border: 2px;
+ background: none;
+ border: 3px solid rgb(208, 169, 42);
  width: 36vh;
+ box-shadow: 0 0 10px rgb(208, 169, 42) ;
  margin-bottom: 0px;
- outline: none;
+ color: aliceblue;
+
 }
 .feedback{
  font-size: 1rem;
@@ -112,8 +116,11 @@ ul li a:hover{
  width: 35vh;
  margin-bottom: 10px;
  resize: none;
+ background: none;
+ color: aliceblue;
+ border:  3px solid rgb(208, 169, 42);
+ box-shadow: 0 0 10px rgb(208, 169, 42) ;
  outline: none;
-
 }
 button{
  width: 20vh;
@@ -122,34 +129,46 @@ button{
  border-radius:5px ;
  cursor: pointer;
  padding :7px;
+ background: none ;
+ color: aliceblue;
+ border: 3px solid rgb(208, 169, 42);
  font-size: 18px;
 }
+.mail::placeholder , .feedback::placeholder{
+ color: aliceblue;
+}
 button:hover{
- background:none;
+ background:#FFFF;
  color: rgb(208, 169, 42);
+ box-shadow: 0 0 10px rgb(208, 169, 42) ;
  border: 1px solid black;
 }
-@media only screen and (max-width: 700px) {
-  .hamburger {
-      display: block;
+/* mobile view */
+@media only screen and (max-width: 768px) {
+  body{
+  background: url(assets/mobile.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ height: 100%;
+ width: 95%;
+ overflow: hidden;
   }
-  .nav-bar {
-      position: absolute;
-      width: 100%;
-      left: -100%;
-      top: 70px;
-      width: 100%;
-      background: #fff;
-      padding: 30px;
-      transition: 0.3s;
+  .nav-bar{
+    display: none;
   }
-  #nav_check:checked ~ .nav-links {
-      left: 0;
+  .mail , .feedback{
+    background: #FFFF;
+    box-shadow: none;
+    font-weight: 500;
+    color: #000;
   }
-  .nav-links ul {
-      display: block;
+  .mail::placeholder , .feedback::placeholder{
+    color: black;
+    font-weight: 900;
   }
-  .nav-links ul li a {
-      margin: 5px 0;
+  .form{
+    height: 100vh;
   }
 }
